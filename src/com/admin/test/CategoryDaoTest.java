@@ -1,10 +1,9 @@
 package com.admin.test;
 
-import java.sql.SQLException;
-
+import com.admin.dao.CategoryDao;
 import org.junit.Test;
 
-import com.admin.dao.CategoryDao;
+import java.sql.SQLException;
 
 public class CategoryDaoTest {
 	

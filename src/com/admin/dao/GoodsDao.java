@@ -1,16 +1,14 @@
 package com.admin.dao;
 
-import java.sql.SQLException;
-import java.util.List;
-
+import com.admin.domain.Goods;
+import com.admin.utils.JdbcUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import com.admin.domain.Goods;
-import com.admin.domain.pageBean;
-import com.admin.utils.JdbcUtil;
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * 商品数据操纵类

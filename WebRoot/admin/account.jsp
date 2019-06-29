@@ -69,7 +69,7 @@
         </div>
         <div class="item1">
             <div>
-                <span>用户名：</span>
+                <span>密码：</span>
                 <input type="text" class="am-form-field" >&nbsp;&nbsp;
             </div>
 

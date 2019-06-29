@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!-- èŽ·å–å½“å‰å·¥ç¨‹çš„åç§°ï¼Œä¿å­˜åœ¨å½“å‰é¡µé¢åŸŸå¯¹è±¡ä¸­ -->
+<!-- »ñÈ¡µ±Ç°¹¤³ÌµÄÃû³Æ£¬±£´æÔÚµ±Ç°Ò³ÃæÓò¶ÔÏóÖÐ -->
 <%
 	String ctx = request.getContextPath();
+	//System.out.println(ctx);
 	pageContext.setAttribute("ctx",ctx);
  %>

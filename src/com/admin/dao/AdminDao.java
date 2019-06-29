@@ -1,12 +1,11 @@
 package com.admin.dao;
 
-import java.sql.SQLException;
-
+import com.admin.domain.Admin;
+import com.admin.utils.JdbcUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
-import com.admin.domain.Admin;
-import com.admin.utils.JdbcUtil;
+import java.sql.SQLException;
 
 /**
  * Êý¾Ý²Ù×ÝÀà

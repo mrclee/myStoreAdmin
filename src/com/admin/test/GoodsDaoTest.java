@@ -1,9 +1,8 @@
 package com.admin.test;
 
-import java.sql.SQLException;
-
 import com.admin.dao.GoodsDao;
-import com.admin.domain.Goods;
+
+import java.sql.SQLException;
 
 public class GoodsDaoTest {
 	
@@ -39,7 +38,7 @@ public class GoodsDaoTest {
 		
 		//System.out.println(GoodsDao.queryCount());
 		
-		System.out.println(GoodsDao.queryPageData(1, 4));
+		System.out.println(GoodsDao.queryPageData(0, 4));
 		
 	}
 

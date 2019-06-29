@@ -1,16 +1,14 @@
 package com.admin.web;
 
-import java.io.IOException;
+import com.admin.domain.Admin;
+import com.admin.service.AdminService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-
-import com.admin.domain.Admin;
-import com.admin.service.AdminService;
+import java.io.IOException;
 
 @WebServlet("/AdminServlet")
 public class AdminServlet extends BaseServlet {
@@ -25,8 +23,9 @@ public class AdminServlet extends BaseServlet {
 	 * @throws ServletException
 	 * @throws IOException
 	 */
-	public String exitLogin(HttpServletRequest request, HttpServletResponse response) 
+	public String exitLogin(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String ctx = request.getContextPath();
 		//System.out.println("exitLogin");
 		//获取session域对象，将admin从域对象中移除
 		HttpSession adminSession = request.getSession();
@@ -34,7 +33,7 @@ public class AdminServlet extends BaseServlet {
 		if(adminSession!=null){
 			adminSession.removeAttribute("admin");
 			response.getWriter().print("感谢您的光临，再见！");
-			response.setHeader("refresh", "3;url=/myStoreAdmin2/admin/admin_login.jsp");
+			response.setHeader("refresh", "3;url="+ctx+"/admin/admin_login.jsp");
 			//return "admin/admin_login.jsp";
 		}
 		return null;
@@ -95,10 +94,10 @@ public class AdminServlet extends BaseServlet {
 			boolean result = new AdminService().regist(username, password);
 			if(result){
 				response.getWriter().write("注册成功，页面跳转中……");
-				response.setHeader("refresh", "3;url=/myStoreAdmin2/admin/admin_login.jsp");
+				response.setHeader("refresh", "3;url=/myStoreAdmin_war_exploded/admin/admin_login.jsp");
 			}else{
 				response.getWriter().write("注册失败，请重新注册！");
-				response.setHeader("refresh", "3;url=/myStoreAdmin2/admin/admin_regist.jsp");
+				response.setHeader("refresh", "3;url=/myStoreAdmin_war_exploded/admin/admin_regist.jsp");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
